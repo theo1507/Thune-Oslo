@@ -59,6 +59,7 @@ html {
 	justify-content: space-between;
 	align-items: center;
 	min-height: 10vh;
+	background-color: var(--background-color);
 }
 
 .scrolled {
@@ -183,6 +184,7 @@ html {
 		width: 100%;
 		padding-bottom: 6%;
 		opacity: 1;
+		left: 0;
 	}
 
 
@@ -394,11 +396,12 @@ h2 img {
 	font-weight: bold;
 	font-size: 60px;
 	color: var(--primary-color);
-	margin: 10px 2px;
+	margin: 0 0 10px;
 }
 
 .title h1:after,
 .title h2:after,
+.intro-section__history-page h1:after,
 .intro-section .intro-section__left-container h1:after {
 	content: "";
 	display: inline-block;
@@ -1054,6 +1057,56 @@ h2 img {
 	display: inline-block;
 }
 
+
+/*
+/* restaurant and gym section  */
+.history-section {
+	padding: 10px 0;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 27px;
+	color: var(--primary-color);
+}
+
+.history-section .title h2 {
+	margin-bottom: 20px;
+	line-height: 1.5;
+}
+
+.history-section .history__image-container img {
+	width: 100%;
+	max-width: 500px;
+	height: auto;
+	padding-top: 20px;
+}
+
+.history-section .google-maps {
+	margin: 20px;
+	height: 530px;
+	width: 600px;
+}
+
+.history-section .google-maps iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.history__image--ellipse {
+	display: none;
+}
+
+.history-section .history__container span {
+	color: var(--fourth-color);
+}
+
+
+@media only screen and (max-width: 1600px) {
+	.intro-section__history-page{
+		padding-left: 4%;
+	}
+}
 @media only screen and (max-width: 1200px) {
 	.intro-section__history-page {
 		padding-left: 0px;
@@ -1061,25 +1114,25 @@ h2 img {
 }
 
 /* medium screen */
-
 @media only screen and (max-width: 600px) {
-	.intro-section
-}
-
-@media only screen and (max-width: 600px) {
+	.intro-section__history-page .intro__link {
+		margin: 30px 0;
+	}
 	.page-container p {
 		font-size: 16px;
 		text-align: left;
-		padding: 10px;
+		padding: 10px 0;
 	}
 
 	.intro-section__history-page h1 {
 		line-height: 1;
-		padding: 10px;
+		padding: 10px 0;
 	}
 
 	.history-section {
 		padding-bottom: 0px !important;
+		margin-top: 50px;
+		margin-bottom: 50px;
 	}
 
 	.intro-section__history-page .intro__image--ellipse {
@@ -1096,12 +1149,9 @@ h2 img {
 
 @media only screen and (max-width: 440px) {
 	.intro-section__history-page {
-		padding: 15px;
+		padding: 15px 0;
 	}
 
-	.history__text {
-		padding-left: 15px;
-	}
 }
 
 @media only screen and (max-width: 375px) {
@@ -1142,56 +1192,6 @@ h2 img {
 		padding-left: 6px;
 	}
 }
-
-/*
-/* restaurant and gym section  */
-.history-section {
-	padding: 10px;
-	margin-top: 100px;
-	margin-bottom: 100px;
-}
-
-.history-section .history__title {
-	font-weight: bold;
-	line-height: 1.5;
-	color: var(--primary-color);
-	font-size: 60px;
-	margin-bottom: 20px;
-}
-
-.history__description {
-	font-style: normal;
-	font-size: 16px;
-	line-height: 27px;
-	color: var(--primary-color);
-}
-
-.history-section .history__image-container img {
-	width: 100%;
-	max-width: 500px;
-	height: auto;
-	padding-top: 20px;
-}
-
-.history-section .google-maps {
-	margin: 20px;
-	height: 530px;
-	width: 600px;
-}
-
-.history-section .google-maps iframe {
-	width: 100%;
-	height: 100%;
-}
-
-.history__image--ellipse {
-	display: none;
-}
-
-.history-section .history__container span {
-	color: var(--fourth-color);
-}
-
 /*media for restaurant */
 
 @media screen and (min-width: 1022px) {
@@ -1201,6 +1201,7 @@ h2 img {
 		align-items: center;
 		justify-content: space-around;
 		margin-top: 0px;
+		gap: 20px;
 	}
 
 	.history-section:nth-child(2n) .history__container {
@@ -1234,18 +1235,18 @@ h2 img {
 		top: 2900px;
 	}
 
-	.history__description {
+	.history-section {
 		text-align: left;
 		font-size: 1.3em;
 		font-style: bold;
 		color: var(--primary-color);
-		display: block;
-		width: 100%;
-		max-width: 500px;
 		line-height: 27px;
 	}
+	.history-section .history__text{
+		max-width: 500px;
+	}
 
-	.history-section .history__title {
+	.history-section .title h2 {
 		font-size: 70px;
 		font-weight: 600;
 	}
@@ -1261,26 +1262,26 @@ h2 img {
 
 }
 
-@media screen and (max-width: 630px) {
-	.history-section .google-maps iframe {
-		width: 470px;
-		height: 350px;
-		margin: auto;
-		text-align: center;
+@media screen and (max-width: 768px) {
+	.history-section {
+		margin-top: 50px;
+		margin-bottom: 50px;
 	}
-
-	.history-section .history__title {
-		font-size: 40px;
-		font-weight: 600;
+	.history-section .google-maps {
+		margin: 20px 0;
+		height: auto;
+		width: 100%;
+	}
+	.history-section .google-maps iframe{
+		width: 100%;
+		height: auto;
+		aspect-ratio: 1 / 0.75;
 	}
 }
-
-@media screen and (max-width: 500px) {
-	.history-section .google-maps iframe {
-		width: 270px;
-		height: 350px;
-		margin: auto;
-		text-align: center;
+@media screen and (max-width: 630px) {
+	.history-section .title h2 {
+		font-size: 40px;
+		font-weight: 600;
 	}
 }
 
@@ -1311,7 +1312,7 @@ h2 img {
 	grid-template-rows: auto 1fr;
 	border-radius: 15px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-	margin: 0 20px;
+	margin: 0;
 }
 
 .restaurants-section .restaurants-section__list .restaurant-item img {
@@ -1532,7 +1533,7 @@ input[type="submit"] {
 
 @media screen and (max-width: 768px) {
 	.footer {
-		padding: 20px;
+		padding: 20px 0;
 	}
 
 	.footer-input[type="text"] {
@@ -1693,6 +1694,9 @@ input[type="submit"] {
 /*-----------FOOTER END---------------------*/
 /*------------------------------------------*/
 /* table page */
+.butikk-table{
+	padding: 50px 0;
+}
 .butikk-table table {
 	width: 100%;
 	margin: 10px 0;
