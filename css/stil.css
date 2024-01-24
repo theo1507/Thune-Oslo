@@ -62,7 +62,7 @@ html {
 	background-color: var(--background-color);
 }
 
-.scrolled {
+.scrolled .container{
 	background-color: #fff;
 }
 
@@ -1125,6 +1125,7 @@ h2 img {
 	}
 
 	.intro-section__history-page h1 {
+		font-size: 48px;
 		line-height: 1;
 		padding: 10px 0;
 	}
