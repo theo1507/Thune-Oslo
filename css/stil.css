@@ -641,7 +641,9 @@ h2 img {
 	padding: 7px 7px 7px 25px;
 	margin-top: 5px;
 }
-
+.about-section__image-wrapper{
+	max-width: 45%;
+}
 .about-section__text {
 	color: var(--primary-color);
 	font-size: 20px;
@@ -684,6 +686,11 @@ h2 img {
 	}
 }
 
+@media and (max-width: 800px) {
+	.about-section__image-wrapper{
+		max-width: 100%;
+	}
+}
 @media screen and (min-width: 450px) and (max-width: 600px) {
 	.about-section__text {
 		padding: 0;
@@ -913,7 +920,7 @@ h2 img {
 	}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and   (max-width: 800px) {
 	.about-section{
 		display: block;
 	}
