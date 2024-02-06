@@ -953,29 +953,20 @@ h2 img {
 	}
 }
 
-@media screen and (max-width: 800px) {
-	.about-section__image-wrapper img {
-		display: none;
-		object-fit: cover;
-	}
-}
-
 @media screen and (min-width: 801px) {
 	.about-section__image-wrapper img {
 		display: block;
 		object-fit: cover;
 	}
-
-	.about-section__image-wrapper-mobile img {
-		display: none;
-		object-fit: cover;
-	}
 }
 
-@media screen and (min-width: 300px) and (max-width: 800px) {
-	.about-section,
-	.about-section .container {
+@media screen and (max-width: 800px) {
+	.about-section{
 		display: block;
+	}
+	.about-section .container{
+		display: flex;
+		flex-direction: column-reverse;
 	}
 
 	.about-section__content {
@@ -1076,7 +1067,9 @@ h2 img {
 	margin-bottom: 20px;
 	line-height: 1.5;
 }
-
+.history-section .history__image-container{
+	max-width: 40%;
+}
 .history-section .history__image-container img {
 	width: 100%;
 	max-width: 500px;
@@ -1112,6 +1105,11 @@ h2 img {
 @media only screen and (max-width: 1200px) {
 	.intro-section__history-page {
 		padding-left: 0px;
+	}
+}
+@media only screen and (max-width: 1020px) {
+	.history-section .history__image-container{
+		max-width: 100%;
 	}
 }
 
@@ -1212,6 +1210,9 @@ h2 img {
 		background-color: var(--background-color);
 		margin: 0 -30px;
 		padding: 100px 40px;
+	}
+	.history-section:nth-child(2n){
+		background-color: var(--background-color);
 	}
 
 	.history-section:nth-child(2n) .history__container span {
@@ -1728,7 +1729,11 @@ input[type="submit"] {
 	border-bottom: 1px solid #37a48b;
 	color: #999;
 }
-
+.butikk-table .butikk-logo img{
+	max-width: 150px;
+	max-height: 90px;
+	object-fit: contain;
+}
 .butikk-table .butikk-logo a {
 	border: none;
 }
