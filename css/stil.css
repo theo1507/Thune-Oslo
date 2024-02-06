@@ -538,7 +538,7 @@ h2 img {
 
 .intro-section .img-container img {
 	float: right;
-	max-width: 600px;
+	width: 600px;
 	max-height: 580px;
 	object-fit: cover;
 }
@@ -915,7 +915,7 @@ h2 img {
 	.about-section__image-wrapper img {
 		display: block;
 		object-fit: cover;
-		max-width: 600px;
+		width: 600px;
 	}
 }
 
